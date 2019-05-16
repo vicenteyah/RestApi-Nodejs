@@ -1,0 +1,16 @@
+GET http://localhost:3000/Clientes HTTP/1.1
+
+###
+
+POST http://localhost:3000/Clientes HTTP/1.1
+Content-Type: : application/json
+
+{
+    "id_cliente" : "CL13NT34",
+    "Nombre" : "Cihan",
+    "ApellidoP" : "Gurpinar",
+    "ApellidoM" : "Terciyoglu",
+    "Telefono" : 55903277,
+    "Direccion" : "C-90 # 12 x 67 y 89 col.Beykoz"
+}
+
