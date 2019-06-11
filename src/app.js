@@ -5,8 +5,9 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
+
 //settings 
-app.set('port', process.env.PORT || 3000);
+const config = require('./config');
 
 //middlewares
 app.use(morgan('dev'));
@@ -24,6 +25,6 @@ require('./routes/tipospRoutes')(app);
 require('./routes/pedidoRoutes')(app);
 require('./routes/productosRoutes')(app);
 
-app.listen(app.get('port'), () => {
-    console.log('server on port 3000');
+app.listen(config.port, () => {
+    console.log(`server running on http://localhost:${config.port}`);
 });
